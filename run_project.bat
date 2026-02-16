@@ -1,0 +1,6 @@
+@echo off
+echo Starting Backend...
+start "Backend" cmd /k "cd capp\backend && call venv\Scripts\activate && python -m uvicorn main:app --reload --port 8000"
+
+echo Starting Frontend...
+start "Frontend" cmd /k "cd capp\web-app && npm run dev"
